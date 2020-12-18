@@ -15,7 +15,7 @@ def apply(auth_token, data):
         'Content-Type': 'application/json'
     }
 
-    return api_service.post('v0/recruiting-entities/', headers, data)
+    return api_service.post('v1/recruiting-entities/', headers, data)
 
 
 def upload(auth_token, file_token_id, files):
