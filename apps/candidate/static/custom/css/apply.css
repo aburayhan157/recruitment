@@ -1,0 +1,14 @@
+#apply .container #apply-row #apply-column #apply-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 700px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+    overflow-y:auto;
+}
+#apply .container #apply-row #apply-column #apply-box #apply-form {
+    padding: 20px;
+}
+#apply .container #apply-row #apply-column #apply-box #apply-form #register-link {
+    margin-top: -85px;
+}

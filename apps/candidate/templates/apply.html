@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'custom/css/apply.css' %}">
+
+<body>
+    <div id="apply">
+        <div class="container">
+            <div id="apply-row" class="row justify-content-center align-items-center">
+                <div id="apply-column" class="col-md-6">
+                    <div id="apply-box" class="col-md-12">
+                        <form id="apply-form" action="apply" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="text-right">
+                                <a href="{% url 'logout' %}" class="btn btn-info" role="button">Logout</a><br><br>
+                            </div>
+                            {% if message %}
+                            <div class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">{{ message }}</h4>
+                            </div>
+                            {% endif %}
+                            <div>
+                                <table>
+                                    {{ form|crispy }}
+                                </table>
+                            </div>
+                            <button type="submit" class="btn btn-success">Apply</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
